@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- index.html -->
+<html ng-app="anguhello">
+<head>
+  <title>Hello Angular!</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+</head>
+<body ng-controller="exemplo1 as ctl">
+<!-- vamos colocar a variável nome no escopo do controller -->
+<h1>Olar {{ctl.nome}}!</h1>
+<input ng-model="ctl.nome"/><br/>
+<button ng-click="ctl.invert()">Inverter nome</button>
+<script type="text/javascript">
+  // um módulo
+  angular.module("anguhello",[]);
+
+  // um controller
+  angular.module("anguhello").controller("exemplo1", function(){
+
+    this.invert = () => {
+      if(this.nome)
+        this.nome = this.nome.split("").reverse().join("");
+    };
+  });
+</script>
+</body>
+</html>
