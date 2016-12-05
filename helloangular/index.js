@@ -1,8 +1,7 @@
-//index.js
-
-const knex = require("./db");
+// index.js
+const express    = require("express");
 const bodyParser = require("body-parser");
-const express = require("express");
+const knex       = require("./db");
 
 const app = express();
 
