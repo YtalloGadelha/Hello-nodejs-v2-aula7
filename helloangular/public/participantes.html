@@ -1,0 +1,14 @@
+<!-- participantes.html -->
+<h1>Participantes</h1>
+<form ng-submit="ctl.salvaparticipante()">
+  <fieldset>
+    <legend>Novo participante</legend>
+    <label>Nome do participante</label>
+    <input ng-model="ctl.novo.nomeparticipante" required/>
+    <br/>
+    <input type="submit"/>
+  </fieldset>
+</form>
+<ul>
+  <li ng-repeat=" ev in ctl.participantes">{{ev.nomeparticipante}}</li>
+</ul>

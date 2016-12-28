@@ -1,0 +1,17 @@
+<!-- eventos.html -->
+<h1>Eventos</h1>
+<form ng-submit="ctl.salvaevento()">
+  <fieldset>
+    <legend>Novo evento</legend>
+    <label>Data</label>
+    <input type="date" ng-model="ctl.novo.dtevento" required/>
+    <br/>
+    <label>Descrição do evento</label>
+    <input ng-model="ctl.novo.dscevento" required/>
+    <br/>
+    <input type="submit"/>
+  </fieldset>
+</form>
+<ul>
+  <li ng-repeat=" ev in ctl.eventos">{{ev.dtevento | date: "yyyy/MM/dd"}} {{ev.dscevento}}</li>
+</ul>

@@ -1,1 +1,3 @@
-angular.module("anguhello",[]);
+angular.module("anguhello",[
+  "ngRoute"
+]);
